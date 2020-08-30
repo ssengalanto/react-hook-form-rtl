@@ -13,7 +13,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "lint": "eslint --fix \"./src/**/*.{ts,tsx,js,jsx}\"",
+    "lint:css": "stylelint \"./src/**/*.{ts,tsx,js,jsx}\"",
+    "format": "prettier --write \"./src/**/*.{ts,tsx,js,jsx}\""
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,8 +24,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "lint-staged": {
+    "*.{ts, tsx, js, jsx}": [
+      "eslint --fix",
+      "stylelint",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "browserslist": {
     "production": [
