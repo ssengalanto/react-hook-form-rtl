@@ -32,7 +32,7 @@ export const useSignForm = () => {
 
   return {
     models: { fields, errors },
-    operations: { handleSubmit, reset },
+    operations: { handleSubmit, reset, control },
     components: { Controller },
   };
 };
