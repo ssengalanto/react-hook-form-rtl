@@ -3,10 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/devtools": "^2.2.1",
+    "@hookform/error-message": "^0.0.4",
+    "@hookform/resolvers": "^0.1.0",
+    "@hookform/strictly-typed": "^0.0.3",
+    "@types/styled-components": "^5.1.2",
+    "antd": "^4.6.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.6.0",
     "react-scripts": "3.4.3",
-    "typescript": "^4.0.2"
+    "styled-components": "^5.1.1",
+    "typescript": "^4.0.2",
+    "yup": "^0.29.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -54,6 +64,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/yup": "^0.29.6",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
     "eslint": "6.6.0",
